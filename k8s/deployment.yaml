@@ -1,26 +1,27 @@
+
 apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: webapp-deployment
+  name: devops-webapp
 
 spec:
   replicas: 2
 
   selector:
     matchLabels:
-      app: webapp
+      app: devops-webapp
 
   template:
     metadata:
       labels:
-        app: webapp
+        app: devops-webapp
 
     spec:
       containers:
-      - name: webapp
+      - name: devops-webapp
 
-        image: YOUR_DOCKER_USERNAME/devops-webapp:latest
+        image: reddy324/devops-webapp:latest
 
         ports:
         - containerPort: 3000
