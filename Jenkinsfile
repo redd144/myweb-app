@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "YOUR_DOCKER_USERNAME/devops-webapp"
+        IMAGE_NAME = "reddy324/devops-webapp"
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
@@ -11,7 +11,7 @@ pipeline {
         stage('Clone') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/YOUR_USERNAME/my-webapp.git'
+                url: 'https://github.com/redd144/my-webapp.git'
             }
         }
 
