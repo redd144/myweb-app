@@ -11,7 +11,7 @@ pipeline {
         stage('Clone') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/redd144/my-webapp.git'
+                url: 'https://github.com/redd144/myweb-app.git'
             }
         }
 
